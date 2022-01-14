@@ -1,0 +1,219 @@
+.cartContainer {
+    width: 90%;
+    position: relative;
+    margin: 5% auto;
+}
+
+.cartHead {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3%;
+    font-weight: 700;
+}
+
+.productsDiv {
+    display: flex;
+}
+
+.productSubDiv {
+    width: 75%;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+}
+
+.coupenPriceDiv {
+    width: 23%;
+    margin-left: 2%;
+}
+
+.coupenDiv {
+    width: 100%;
+    height: 140px;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    display: flex;
+}
+
+.coupenDiv > div {
+    width: 80%;
+    margin: auto;
+}
+
+.coupenDiv > div > p {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+.coupenDiv > div > div {
+    display: flex;
+    height: 40px;
+}
+
+.coupenDiv > div > div > input {
+    width: 80%;
+    padding-left: 5%;
+    border: 1px solid #a4a4a4;
+    border-radius: 10px 0 0 10px;
+    border-right-width: 0px;
+}
+
+.coupenDiv > div > div > input:focus {
+    outline: none !important;
+    border: 1px solid #ffd200;
+}
+
+.coupenDiv > div > div > button {
+    width: 20%;
+    border: 1px solid #ffd200;
+    background: #ffd200;
+    color: black;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.coupenDiv > div > div > button:hover {
+    background-color: black;
+    color: #ffd200;
+    border: 1px solid black;
+}
+
+.priceDiv {
+    width: 100%;
+    margin-top: 10%;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+}
+
+.priceDiv > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10% 5%;
+}
+
+.priceDiv > div > div:nth-child(1) {
+    width: 50%;
+}
+
+.priceDiv > div > div:nth-child(2) {
+    width: 50%;
+    text-align: end;
+}
+
+.priceDiv > div > div:nth-child(2) > p:nth-child(3) {
+    font-weight: 700;
+}
+
+.priceDiv > div > div:nth-child(3) {
+    width: 80%;
+    height: 1px;
+    background: #ffd200;
+    position: relative;
+    margin: 5% auto;
+}
+
+.priceDiv > div > div:nth-child(4) {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    width: 98%;
+    margin: 0px 1%;
+}
+
+thead {
+    height: 45px;
+    opacity: 0.5;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: center;
+}
+
+tbody {
+    text-align: center;
+}
+
+tbody > tr > td {
+    width: calc(100% / 6);
+}
+
+.productImage {
+    width: 150px;
+}
+
+.productImage > img {
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.productName {
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.productQuantity > div {
+    display: flex;
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+
+.negativeSign {
+    background: #ffd200;
+    border: 2px solid #ffd200;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#box_value {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ffd200;
+}
+
+.positiveSign {
+    background: #ffd200;
+    border: 2px solid #ffd200;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.productPrice {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.addtowishlistButton > button {
+    width: 200px;
+    height: 40px;
+    background: #ffd200;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.addtowishlistButton > button > i {
+	padding-right: 10px;
+}
+
+.productRemoveButton > button {
+	width: 200px;
+    height: 40px;
+    background: #b00020;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+	color: white;
+}
+
+.productRemoveButton > button > i {
+	padding-right: 10px;
+}

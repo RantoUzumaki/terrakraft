@@ -7,8 +7,16 @@
 // 	version: "wc/v3"
 // });
 
-// const siteURL = 'http://convergenz.in'
-// const siteURL = 'https://localhost/terrakraft'
-const siteURL = 'https://localhost/wordpress'
+// const api = new WooCommerceRestApi({
+// 	url: "https://localhost/terrakraft",
+// 	consumerKey: "ck_a211c443e33964d3e0cc41d03b53682f1f0264af",
+// 	consumerSecret: "cs_fc1db63c002a7bed0c582a34a9dcf6fe01fadfb6",
+// 	version: "wc/v3"
+// });
 
-export default siteURL
+// const siteURL = "https://convergenz.in";
+const siteURL = 'https://localhost/terrakraft'
+// const siteURL = 'https://localhost/wordpress'
+
+// export default api
+export default siteURL;
