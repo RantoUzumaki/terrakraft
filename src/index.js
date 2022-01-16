@@ -11,7 +11,7 @@ import { CookiesProvider } from "react-cookie";
 
 ReactDOM.render(
     <CookiesProvider>
-        <App />,
+        <App />
     </CookiesProvider>,
     document.getElementById("root")
 );

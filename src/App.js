@@ -4,6 +4,9 @@ import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PayByRazorPay from "./pages/Paymant";
+import Checkout from "./pages/Checkout";
+import Homepage from "./pages/Homepage";
+import Regitser from "./pages/Register";
 
 function App() {
     return (
@@ -11,13 +14,16 @@ function App() {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path="/" exact element={<Login />}></Route>
+                    <Route path="/" exact element={<Homepage />}></Route>
+                    <Route path="/login" exact element={<Login />}></Route>
+                    <Route path="/register" exact element={<Regitser />}></Route>
                     <Route
                         path="/single-product"
                         element={<SingleProduct />}
                     ></Route>
                     <Route path="/cart" element={<Cart />}></Route>
-                    <Route path="/payment" element={<PayByRazorPay />}></Route>
+                    {/* <Route path="/payment" element={<PayByRazorPay />}></Route> */}
+                    <Route path="/checkout" element={<Checkout />}></Route>
                 </Routes>
             </Router>
         </div>

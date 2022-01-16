@@ -19,6 +19,8 @@
     width: 75%;
     border: 2px solid #e3e3e3;
     border-radius: 10px;
+	display: flex;
+	height: fit-content;
 }
 
 .coupenPriceDiv {
@@ -170,7 +172,7 @@ tbody > tr > td {
     cursor: pointer;
 }
 
-#box_value {
+#quantity_value {
     width: 60px;
     text-align: center;
     border: 1px solid #ffd200;
@@ -207,7 +209,7 @@ tbody > tr > td {
 .productRemoveButton > button {
 	width: 200px;
     height: 40px;
-    background: #b00020;
+    background: #eb3131;
     border: none;
     border-radius: 10px;
     font-weight: 600;
@@ -216,4 +218,31 @@ tbody > tr > td {
 
 .productRemoveButton > button > i {
 	padding-right: 10px;
+}
+
+tfoot {
+	border-top: 1px solid #e3e3e3;
+	height: 55px;
+}
+
+.continueShoppingButton > button {
+	width: 200px;
+    height: 40px;
+    background: #ffd200;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.continueShoppingButton > button > i {
+	padding-right: 10px;
+}
+
+.productCheckoutButton > button {
+	width: 200px;
+    height: 40px;
+    background: #ffd200;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
 }

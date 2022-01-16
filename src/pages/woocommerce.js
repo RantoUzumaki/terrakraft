@@ -1,22 +1,46 @@
-// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"
+import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
+import CoCartAPI from "@cocart/cocart-rest-api";
 
-// const api = new WooCommerceRestApi({
-// 	url: "https://convergenz.in",
-// 	consumerKey: "ck_58cce6fd583449b522dce51dfb9a6cc2406098e5",
-// 	consumerSecret: "cs_ee95c39e9ab7820d0b2015e65d25a967bdea0d4b",
-// 	version: "wc/v3"
+export const api = new WooCommerceRestApi({
+	url: "https://convergenz.in/terrakraft",
+	consumerKey: "ck_94af76112511422a84ecb44ff8e82583290aab20",
+	consumerSecret: "cs_6d4822126a9eab98b626a7415d28d6d0046e5f24",
+	version: "wc/v3",
+	queryStringAuth: true,
+	axiosConfig: { headers: {} },
+});
+
+// export const coCartApi = new CoCartAPI({
+//     url: "https://convergenz.in/terrakraft/",
+//     consumerKey: "ck_94af76112511422a84ecb44ff8e82583290aab20",
+//     consumerSecret: "cs_6d4822126a9eab98b626a7415d28d6d0046e5f24",
+//     queryStringAuth: true,
+//     axiosConfig: {
+//         headers: {},
+//     },
 // });
 
-// const api = new WooCommerceRestApi({
-// 	url: "https://localhost/terrakraft",
-// 	consumerKey: "ck_a211c443e33964d3e0cc41d03b53682f1f0264af",
-// 	consumerSecret: "cs_fc1db63c002a7bed0c582a34a9dcf6fe01fadfb6",
-// 	version: "wc/v3"
+// export const api = new WooCommerceRestApi({
+//     url: "https://localhost/terrakraft",
+//     consumerKey: "ck_d6f1f1a95bb2e6dcdbc7b7d8116fff87785c1b4d",
+//     consumerSecret: "cs_e0b8ffdadb78493059bead02b94ccad958b832cb",
+//     version: "wc/v3",
+//     queryStringAuth: true,
+//     axiosConfig: {
+//         headers: {},
+//     },
 // });
 
-// const siteURL = "https://convergenz.in";
-const siteURL = 'https://localhost/terrakraft'
-// const siteURL = 'https://localhost/wordpress'
+// export const coCartApi = new CoCartAPI({
+//     url: "https://localhost/terrakraft",
+//     consumerKey: "ck_d6f1f1a95bb2e6dcdbc7b7d8116fff87785c1b4d",
+//     consumerSecret: "cs_e0b8ffdadb78493059bead02b94ccad958b832cb",
+//     queryStringAuth: true,
+//     axiosConfig: {
+//         headers: {},
+//     },
+// });
 
-// export default api
-export default siteURL;
+export const siteURL = "https://convergenz.in/terrakraft";
+// export const siteURL = "https://localhost/terrakraft";
+// export const siteURL = 'https://localhost/wordpress'

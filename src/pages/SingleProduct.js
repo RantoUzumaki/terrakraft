@@ -5,40 +5,35 @@ import Warrenty from "../assets/warrenty.png";
 import Shipping from "../assets/free-shipping.png";
 import PayMethods from "../assets/pay-methods.png";
 
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import siteURL from "./woocommerce";
-import { useCookies } from "react-cookie";
+import { api, coCartApi, siteURL } from "./woocommerce";
+import axios from "axios";
 
 function SingleProduct() {
     let Redirect = useNavigate();
 
+    const [product, setProduct] = useState();
+
     useEffect(() => {
         async function getProduct() {
-            axios
-                .get(
-                    `${siteURL}/wp-json/wc/v2/products/7578`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${localStorage.getItem("token")}`,
-                        },
+            api.get(
+                "products/7578",
+                {
+                    headers: {
+                        "Authorization": `Bearer ${localStorage.getItem(
+                            "token"
+                        )}`,
                     },
-                    { withCredentials: true }
-                )
-                .then((response) => {
-                    console.log(response);
-                    setProduct(response.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+                },
+                { withCredentials: true }
+            ).then((res) => {
+                console.log(res);
+                setProduct(res.data);
+            });
         }
 
         getProduct();
     }, []);
-
-    const [product, setProduct] = useState(null);
-    const [cookies, setCookie] = useCookies();
 
     function prodImg(e) {
         var source_src = document.getElementById("productimage1").src;
@@ -87,24 +82,28 @@ function SingleProduct() {
     function addToCart(e) {
         var prodId = e.target.attributes["data-index"].value;
         var cart_key = localStorage.getItem("cart_key");
+        var data = {
+            id: prodId,
+            quantity: "1",
+        };
 
         axios
             .post(
                 `${siteURL}/wp-json/cocart/v2/cart/add-item`,
+                data,
                 {
-                    header: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`,
-                        cart_key: cart_key,
+                    headers: {
+                        "Authorization": `Bearer ${localStorage.getItem(
+                            "token"
+                        )}`,
                     },
-                    id: prodId,
-                    quantity: "1",
                 },
                 { withCredentials: true }
             )
             .then((response) => {
                 console.log(response);
                 localStorage.setItem("cart_key", response.data.cart_key);
-                // alert("Product Added to cart");
+                alert("Product Added to cart");
                 // Redirect("/cart");
             })
             .catch((error) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import siteURL from "./woocommerce";
+import { coCartApi, siteURL } from "./woocommerce";
 
 function Login() {
     let Redirect = useNavigate();
@@ -12,9 +12,11 @@ function Login() {
         };
 
         axios
-            .post(`${siteURL}/wp-json/jwt-auth/v1/token`, loginData, {
-                withCredentials: true,
-            })
+            .post(
+                `${siteURL}/wp-json/jwt-auth/v1/token`,
+                loginData,
+                { withCredentials: true }
+            )
             .then((res) => {
                 if (undefined === res.data.token) {
                     alert(res.data.message);
@@ -33,6 +35,7 @@ function Login() {
             .catch((error) => {
                 console.log(error);
             });
+		
     }
 
     return (
