@@ -14,8 +14,8 @@ function App() {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path="/" exact element={<Homepage />}></Route>
-                    <Route path="/login" exact element={<Login />}></Route>
+                    {/* <Route path="/" exact element={<Homepage />}></Route> */}
+                    <Route path="/" exact element={<Login />}></Route>
                     <Route path="/register" exact element={<Regitser />}></Route>
                     <Route
                         path="/single-product"
