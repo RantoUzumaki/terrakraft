@@ -1,4 +1,3 @@
-import "../css/singleproduct.css";
 import { useState, useEffect } from "react";
 
 import Warrenty from "../assets/warrenty.png";
@@ -9,7 +8,15 @@ import { useNavigate } from "react-router-dom";
 import { api, coCartApi, siteURL } from "./woocommerce";
 import axios from "axios";
 
+let cssLoaded = false
+
 function SingleProduct() {
+
+	if (cssLoaded === false) {
+		cssLoaded = true;
+		import('../css/singleproduct.css');
+	}
+
     let Redirect = useNavigate();
 
     const [product, setProduct] = useState();

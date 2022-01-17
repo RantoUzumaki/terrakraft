@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { siteURL, coCartApi } from "./woocommerce";
-import "../css/cart.css";
 import img from "../assets/product-image1.png";
 import PayMethods from "../assets/pay-methods.png";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
+let cssLoaded = false;
+
 function Cart() {
+
+	if (cssLoaded === false) {
+		cssLoaded = true;
+		import('../css/cart.css');
+	}
+
     let Redirect = useNavigate();
 
     const [cart, setCart] = useState([]);

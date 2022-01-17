@@ -6,7 +6,14 @@ import logoBlack from "../assets/logo-black.png";
 
 import { Link } from "react-router-dom";
 
+let cssLoaded = false;
+
 function Header() {
+    if (cssLoaded === false) {
+        cssLoaded = true;
+        import("../css/header.css");
+    }
+
     function goToCart() {}
 
     return (
