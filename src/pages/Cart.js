@@ -54,41 +54,6 @@ function Cart() {
                     console.log(error);
                 });
         }
-        // async function getCart() {
-        //     coCartApi
-        //         .get(
-        //             "cart/items",
-        //             {
-        //                 header: {
-        //                     "Authorization": `Bearer ${localStorage.getItem(
-        //                         "token"
-        //                     )}`,
-        //                 },
-        //             },
-        //             { withCredentials: true }
-        //         )
-        //         .then((res) => {
-        //             setCart(res.data);
-        //         });
-        // }
-
-        // async function getTotal() {
-        //     coCartApi
-        //         .get(
-        //             "cart/totals",
-        //             {
-        //                 header: {
-        //                     "Authorization": `Bearer ${localStorage.getItem(
-        //                         "token"
-        //                     )}`,
-        //                 },
-        //             },
-        //             { withCredentials: true }
-        //         )
-        //         .then((res) => {
-        //             setTotals(res.data);
-        //         });
-        // }
 
         getCart();
         getTotal();

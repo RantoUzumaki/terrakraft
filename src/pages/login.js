@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { coCartApi, siteURL } from "./woocommerce";
+import { siteURL } from "./woocommerce";
 
 function Login() {
     let Redirect = useNavigate();
