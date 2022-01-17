@@ -1,21 +1,21 @@
-.full-width-header {
+.header-full-width-header {
     width: 100%;
     height: 220px;
     background-color: #ffd200;
     color: black;
 }
 
-.header-bg-img {
+.header-header-bg-img {
     background-image: url("../assets/header-bg.png");
     height: 80%;
 }
 
-.logo-icon-section {
+.header-logo-icon-section {
     position: relative;
     height: 100%;
 }
 
-.logo-icon-center {
+.header-logo-icon-center {
     width: 70%;
     position: relative;
     margin: auto;
@@ -23,7 +23,7 @@
     height: 100%;
 }
 
-.logo-img {
+.header-logo-img {
     width: 75%;
     height: 50%;
     position: absolute;
@@ -31,13 +31,13 @@
     display: flex;
 }
 
-.logo {
+.header-logo {
     cursor: pointer;
     width: 200px;
     height: 60px;
 }
 
-.four-icon-sec {
+.header-four-icon-sec {
     display: flex;
     width: 25%;
     height: 40%;
@@ -48,34 +48,34 @@
     right: 0;
 }
 
-.search-icon,
-.cart-icon,
-.wishlist-icon,
-.profile-icon {
+.header-search-icon,
+.header-cart-icon,
+.header-wishlist-icon,
+.header-profile-icon {
     font-size: 28px;
 }
 
-.cart-icon > a {
+.header-cart-icon > a {
     color: white !important;
 }
 
-.cart-icon > a:hover {
+.header-cart-icon > a:hover {
     color: #ffd200 !important;
 }
 
-.search-icon-span:hover,
-.cart-icon-span:hover,
-.wishlist-icon-span:hover,
-.profile-icon-span:hover {
+.header-search-icon-span:hover,
+.header-cart-icon-span:hover,
+.header-wishlist-icon-span:hover,
+.header-profile-icon-span:hover {
     cursor: pointer;
 }
 
-.header-navbar {
+.header-header-navbar {
     width: 100%;
     height: 20%;
 }
 
-.navbar-center {
+.header-navbar-center {
     width: 65%;
     position: relative;
     margin: auto;
@@ -84,22 +84,22 @@
     height: 100%;
 }
 
-.flooring-btn,
-.wallcovering-btn,
-.store-locater-btn,
-.design-your-room-btn,
-.partner-with-us-btn,
-.downloads-btn {
+.header-flooring-btn,
+.header-wallcovering-btn,
+.header-store-locater-btn,
+.header-design-your-room-btn,
+.header-partner-with-us-btn,
+.header-downloads-btn {
     width: calc(100% / 6);
     text-align: center;
 }
 
-.flooring,
-.wallcovering,
-.store-locater,
-.design-your-room,
-.partner-with-us,
-.downloads {
+.header-flooring,
+.header-wallcovering,
+.header-store-locater,
+.header-design-your-room,
+.header-partner-with-us,
+.header-downloads {
     position: relative;
     color: black;
     text-decoration: none;
@@ -109,17 +109,17 @@
     padding-top: 8px;
 }
 
-.downloads-btn:hover {
+.header-downloads-btn:hover {
     color: white;
     background: #ffd200;
 }
 
-.flooring:hover,
-.wallcovering:hover,
-.store-locater:hover,
-.design-your-room:hover,
-.partner-with-us:hover,
-.downloads:hover {
+.header-flooring:hover,
+.header-wallcovering:hover,
+.header-store-locater:hover,
+.header-design-your-room:hover,
+.header-partner-with-us:hover,
+.header-downloads:hover {
     cursor: pointer;
     color: white;
     background-color: black;

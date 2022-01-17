@@ -1,9 +1,9 @@
-.container {
+.checkoutcontainer {
     max-width: 50rem;
     margin: 0 auto;
 }
 
-.footer {
+.checkoutfooter {
     color: #a8a8a8;
     padding: 10px;
     font-size: 12px;
@@ -13,17 +13,17 @@
     text-align: center;
 }
 
-.form__name {
+.checkoutform__name {
     color: #b9bac5;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1checkout5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
     margin-top: 60px;
 }
 
-.form__container {
+.checkoutform__container {
     width: 100%;
     min-height: 300px;
     background-color: #fff;
@@ -33,116 +33,116 @@
     margin-bottom: 100px;
 }
 
-.personal--form {
+.checkoutpersonal--form {
     color: #a4a9c5;
-    font-size: 0.7rem;
-    letter-spacing: 0.5px;
+    font-size: 0checkout7rem;
+    letter-spacing: 0checkout5px;
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 55px;
     margin-top: 10px;
 }
-.personal--form .last {
+.checkoutpersonal--form .checkoutlast {
     margin-left: 0px;
     margin-top: 20px;
 }
-.personal--form .first,
-.personal--form .last,
-.personal--form .email,
-.personal--form .number {
+.checkoutpersonal--form .checkoutfirst,
+.checkoutpersonal--form .checkoutlast,
+.checkoutpersonal--form .checkoutemail,
+.checkoutpersonal--form .checkoutnumber {
     display: inline-block;
 }
-.personal--form .first label,
-.personal--form .last label,
-.personal--form .email label,
-.personal--form .number label {
+.checkoutpersonal--form .checkoutfirst label,
+.checkoutpersonal--form .checkoutlast label,
+.checkoutpersonal--form .checkoutemail label,
+.checkoutpersonal--form .checkoutnumber label {
     margin-bottom: 10px;
 }
-.personal--form .first label,
-.personal--form .first input,
-.personal--form .last label,
-.personal--form .last input,
-.personal--form .email label,
-.personal--form .email input,
-.personal--form .number label,
-.personal--form .number input {
+.checkoutpersonal--form .checkoutfirst label,
+.checkoutpersonal--form .checkoutfirst input,
+.checkoutpersonal--form .checkoutlast label,
+.checkoutpersonal--form .checkoutlast input,
+.checkoutpersonal--form .checkoutemail label,
+.checkoutpersonal--form .checkoutemail input,
+.checkoutpersonal--form .checkoutnumber label,
+.checkoutpersonal--form .checkoutnumber input {
     display: block;
     min-width: 250px;
 }
-.personal--form .email {
+.checkoutpersonal--form .checkoutemail {
     margin-top: 20px;
 }
-.personal--form .email input {
+.checkoutpersonal--form .checkoutemail input {
     width: 250px;
 }
-.personal--form .number {
+.checkoutpersonal--form .checkoutnumber {
     margin-top: 20px;
 }
-.personal--form .number input {
+.checkoutpersonal--form .checkoutnumber input {
     width: 250px;
 }
 
-.shipping--form {
+.checkoutshipping--form {
     color: #a4a9c5;
-    font-size: 0.7rem;
-    letter-spacing: 0.5px;
+    font-size: 0checkout7rem;
+    letter-spacing: 0checkout5px;
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 55px;
     margin-top: 10px;
 }
-.shipping--form .row.two,
-.shipping--form .row.three {
+.checkoutshipping--form .checkoutrow.checkouttwo,
+.checkoutshipping--form .checkoutrow.checkoutthree {
     margin-top: 20px;
 }
-.shipping--form .address-two,
-.shipping--form .state,
-.shipping--form .country {
+.checkoutshipping--form .checkoutaddress-two,
+.checkoutshipping--form .checkoutstate,
+.checkoutshipping--form .checkoutcountry {
     margin-left: 0px;
 }
-.shipping--form .address,
-.shipping--form .address-two,
-.shipping--form .city,
-.shipping--form .state,
-.shipping--form .zip,
-.shipping--form .country {
+.checkoutshipping--form .checkoutaddress,
+.checkoutshipping--form .checkoutaddress-two,
+.checkoutshipping--form .checkoutcity,
+.checkoutshipping--form .checkoutstate,
+.checkoutshipping--form .checkoutzip,
+.checkoutshipping--form .checkoutcountry {
     display: inline-block;
 }
-.shipping--form .address label,
-.shipping--form .address-two label,
-.shipping--form .city label,
-.shipping--form .state label,
-.shipping--form .zip label,
-.shipping--form .country label {
+.checkoutshipping--form .checkoutaddress label,
+.checkoutshipping--form .checkoutaddress-two label,
+.checkoutshipping--form .checkoutcity label,
+.checkoutshipping--form .checkoutstate label,
+.checkoutshipping--form .checkoutzip label,
+.checkoutshipping--form .checkoutcountry label {
     margin-bottom: 10px;
 }
-.shipping--form .address label,
-.shipping--form .address input,
-.shipping--form .address-two label,
-.shipping--form .address-two input,
-.shipping--form .city label,
-.shipping--form .city input,
-.shipping--form .state label,
-.shipping--form .state input,
-.shipping--form .zip label,
-.shipping--form .zip input,
-.shipping--form .country label,
-.shipping--form .country input {
+.checkoutshipping--form .checkoutaddress label,
+.checkoutshipping--form .checkoutaddress input,
+.checkoutshipping--form .checkoutaddress-two label,
+.checkoutshipping--form .checkoutaddress-two input,
+.checkoutshipping--form .checkoutcity label,
+.checkoutshipping--form .checkoutcity input,
+.checkoutshipping--form .checkoutstate label,
+.checkoutshipping--form .checkoutstate input,
+.checkoutshipping--form .checkoutzip label,
+.checkoutshipping--form .checkoutzip input,
+.checkoutshipping--form .checkoutcountry label,
+.checkoutshipping--form .checkoutcountry input {
     display: block;
     min-width: 250px;
 }
 
-.form__question {
+.checkoutform__question {
     padding: 10px 55px;
     color: #646e8a;
 }
-.form__question p {
+.checkoutform__question p {
     display: inline-block;
     margin-left: 10px;
     font-weight: 500;
     vertical-align: middle;
 }
-.form__question input[type="checkbox"] {
+.checkoutform__question input[type="checkbox"] {
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -152,41 +152,39 @@
     background-color: transparent;
     border-radius: 3px;
     border: 2px solid #646e8a;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0checkout2s
+        cubic-bezier(0checkout4, 0, 0checkout2, 1);
 }
-.form__question input[type="checkbox"]:checked {
+.checkoutform__question input[type="checkbox"]:checked {
     background-color: #18c2c0;
 }
 
-input {
-    font-size: 0.8rem;
+.checkoutInput {
+    font-size: 0checkout8rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0checkout5px;
     background: transparent;
     border: 1px solid #a4a9c5;
     border-radius: 3px;
     outline: none;
     padding: 10px;
-    transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 0checkout2s
+        cubic-bezier(0checkout4, 0, 0checkout2, 1);
     color: #18c2c0;
 }
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    -webkit-text-fill-color: #18c2c0;
-}
-input:focus {
+.checkoutInput:focus {
     border-color: #18c2c0;
 }
-input::placeholder {
+.checkoutInput::placeholder {
     font-weight: 500;
     color: #646e8a;
 }
 
-.form__confirmation {
+.checkoutform__confirmation {
     padding: 10px 55px;
 }
 
-button {
+.checkoutButton {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
@@ -197,22 +195,23 @@ button {
     padding: 18px;
     border-radius: 5px;
     outline: none;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0checkout2s
+        cubic-bezier(0checkout4, 0, 0checkout2, 1);
     position: relative;
     left: 80%;
 }
-button:hover {
+.checkoutButton:hover {
     background-color: #15aeac;
 }
-button:active {
+.checkoutButton:active {
     background-color: #139b99;
 }
 
-.box {
+.checkoutbox {
     cursor: default;
     user-select: none;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1checkout5rem;
     font-weight: 400;
     height: 40px;
     width: 40px;
@@ -222,7 +221,7 @@ button:active {
     text-align: center;
     color: #646e8a;
 }
-.box.billing {
+.checkoutbox.checkoutbilling {
     line-height: 30px;
 }
 
@@ -233,7 +232,7 @@ section:nth-child(1) {
     margin-top: 0px;
 }
 
-.sections span {
+.checkoutsections span {
     color: #646e8a;
     text-transform: uppercase;
     font-weight: 500;
@@ -241,8 +240,15 @@ section:nth-child(1) {
     margin-left: 15px;
 }
 
-.right-icon {
+.checkoutright-icon {
     float: right;
     margin-right: 30px;
     margin-top: 0px;
+}
+
+.checkoutcity,
+.checkoutstate,
+.checkoutzip,
+.checkoutcountry {
+    margin-top: 20px;
 }

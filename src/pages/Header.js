@@ -1,60 +1,52 @@
-import { Component } from "react";
 import "../css/header.css";
 
 import logoWhite from "../assets/logo-white.png";
-import logoBlack from "../assets/logo-black.png";
 
 import { Link } from "react-router-dom";
 
-let cssLoaded = false;
-
 function Header() {
-    if (cssLoaded === false) {
-        cssLoaded = true;
-        import("../css/header.css");
-    }
-
+	
     function goToCart() {}
 
     return (
         <div>
-            <div className="full-width-header">
-                <div className="header-bg-img">
-                    <div className="logo-icon-section">
-                        <div className="logo-icon-center">
-                            <div className="logo-img">
+            <div className="header-full-width-header">
+                <div className="header-header-bg-img">
+                    <div className="header-logo-icon-section">
+                        <div className="header-logo-icon-center">
+                            <div className="header-logo-img">
                                 <Link to="/">
                                     <img
-                                        className="logo"
+                                        className="header-logo"
                                         src={logoWhite}
                                         alt="Logo"
                                     />
                                 </Link>
                             </div>
-                            <div className="four-icon-sec">
-                                <div className="search-icon">
-                                    <span className="search-icon-span">
-                                        <i className="bi bi-search "></i>
+                            <div className="header-four-icon-sec">
+                                <div className="header-search-icon">
+                                    <span className="header-search-icon-span">
+                                        <i className="header-bi bi-search "></i>
                                     </span>
                                 </div>
-                                <div className="cart-icon">
+                                <div className="header-cart-icon">
                                     <Link to="/cart">
                                         <span
                                             onClick={goToCart}
-                                            className="cart-icon-span"
+                                            className="header-cart-icon-span"
                                         >
-                                            <i className="bi bi-cart-dash "></i>
+                                            <i className="header-bi bi-cart-dash "></i>
                                         </span>
                                     </Link>
                                 </div>
-                                <div className="wishlist-icon">
-                                    <span className="wishlist-icon-span">
-                                        <i className="bi bi-heart-fill "></i>
+                                <div className="header-wishlist-icon">
+                                    <span className="header-wishlist-icon-span">
+                                        <i className="header-bi bi-heart-fill "></i>
                                     </span>
                                 </div>
-                                <div className="profile-icon">
-                                    <span className="profile-icon-span">
-                                        <i className="bi bi-person-fill "></i>
+                                <div className="header-profile-icon">
+                                    <span className="header-profile-icon-span">
+                                        <i className="header-bi bi-person-fill "></i>
                                     </span>
                                 </div>
                             </div>
@@ -62,35 +54,35 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="header-navbar">
-                    <div className="navbar-center">
-                        <div className="flooring-btn">
-                            <a className="flooring" href="#">
+                <div className="header-header-navbar">
+                    <div className="header-navbar-center">
+                        <div className="header-flooring-btn">
+                            <a className="header-flooring" href="#">
                                 Flooring
                             </a>
                         </div>
-                        <div className="wallcovering-btn">
-                            <a className="wallcovering" href="#">
+                        <div className="header-wallcovering-btn">
+                            <a className="header-wallcovering" href="#">
                                 Wallcovering
                             </a>
                         </div>
-                        <div className="store-locater-btn">
-                            <a className="store-locater" href="#">
+                        <div className="header-store-locater-btn">
+                            <a className="header-store-locater" href="#">
                                 Store Locater
                             </a>
                         </div>
-                        <div className="design-your-room-btn">
-                            <a className="design-your-room" href="#">
+                        <div className="header-design-your-room-btn">
+                            <a className="header-design-your-room" href="#">
                                 Design your room
                             </a>
                         </div>
-                        <div className="partner-with-us-btn">
-                            <a className="partner-with-us" href="#">
+                        <div className="header-partner-with-us-btn">
+                            <a className="header-partner-with-us" href="#">
                                 Partner with us
                             </a>
                         </div>
-                        <div className="downloads-btn">
-                            <a className="downloads" href="#">
+                        <div className="header-downloads-btn">
+                            <a className="header-downloads" href="#">
                                 Downloads
                             </a>
                         </div>

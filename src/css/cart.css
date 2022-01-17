@@ -1,21 +1,21 @@
-.cartContainer {
+.cartcartContainer {
     width: 90%;
     position: relative;
     margin: 5% auto;
 }
 
-.cartHead {
+.cartcartHead {
     text-align: center;
     font-size: 36px;
     margin-bottom: 3%;
     font-weight: 700;
 }
 
-.productsDiv {
+.cartproductsDiv {
     display: flex;
 }
 
-.productSubDiv {
+.cartproductSubDiv {
     width: 75%;
     border: 2px solid #e3e3e3;
     border-radius: 10px;
@@ -23,12 +23,12 @@
 	height: fit-content;
 }
 
-.coupenPriceDiv {
+.cartcoupenPriceDiv {
     width: 23%;
     margin-left: 2%;
 }
 
-.coupenDiv {
+.cartcoupenDiv {
     width: 100%;
     height: 140px;
     border: 2px solid #e3e3e3;
@@ -36,23 +36,23 @@
     display: flex;
 }
 
-.coupenDiv > div {
+.cartcoupenDiv > div {
     width: 90%;
     margin: auto;
 }
 
-.coupenDiv > div > p {
+.cartcoupenDiv > div > p {
     font-size: 22px;
     padding: 0;
     margin: 0;
 }
 
-.coupenDiv > div > div {
+.cartcoupenDiv > div > div {
     display: flex;
     height: 40px;
 }
 
-.coupenDiv > div > div > input {
+.cartcoupenDiv > div > div > input {
     width: 70%;
     padding-left: 5%;
     border: 1px solid #a4a4a4;
@@ -60,12 +60,12 @@
     border-right-width: 0px;
 }
 
-.coupenDiv > div > div > input:focus {
+.cartcoupenDiv > div > div > input:focus {
     outline: none !important;
     border: 1px solid #ffd200;
 }
 
-.coupenDiv > div > div > button {
+.cartcoupenDiv > div > div > button {
     width: 30%;
     border: 1px solid #ffd200;
     background: #ffd200;
@@ -75,39 +75,39 @@
     border-bottom-left-radius: 0;
 }
 
-.coupenDiv > div > div > button:hover {
+.cartcoupenDiv > div > div > button:hover {
     background-color: black;
     color: #ffd200;
     border: 1px solid black;
 }
 
-.priceDiv {
+.cartpriceDiv {
     width: 100%;
     margin-top: 10%;
     border: 2px solid #e3e3e3;
     border-radius: 10px;
 }
 
-.priceDiv > div {
+.cartpriceDiv > div {
     display: flex;
     flex-wrap: wrap;
     margin: 10% 5%;
 }
 
-.priceDiv > div > div:nth-child(1) {
+.cartpriceDiv > div > div:nth-child(1) {
     width: 50%;
 }
 
-.priceDiv > div > div:nth-child(2) {
+.cartpriceDiv > div > div:nth-child(2) {
     width: 50%;
     text-align: end;
 }
 
-.priceDiv > div > div:nth-child(2) > p:nth-child(3) {
+.cartpriceDiv > div > div:nth-child(2) > p:nth-child(3) {
     font-weight: 700;
 }
 
-.priceDiv > div > div:nth-child(3) {
+.cartpriceDiv > div > div:nth-child(3) {
     width: 80%;
     height: 1px;
     background: #ffd200;
@@ -115,12 +115,12 @@
     margin: 5% auto;
 }
 
-.priceDiv > div > div:nth-child(4) {
+.cartpriceDiv > div > div:nth-child(4) {
     width: 100%;
     text-align: center;
 }
 
-.priceDiv > div > div > img {
+.cartpriceDiv > div > div > img {
 	width: 100%;
 }
 
@@ -132,7 +132,7 @@ table {
 
 thead {
     height: 45px;
-    opacity: 0.5;
+    opacity: 0.cart5;
     border-bottom: 1px solid #e3e3e3;
     text-align: center;
 }
@@ -147,29 +147,29 @@ tbody > tr > td {
     width: calc(100% / 6);
 }
 
-.productImage {
+.cartproductImage {
     width: 150px;
 }
 
-.productImage > img {
+.cartproductImage > img {
     width: 100%;
     margin: 15px 0px;
 }
 
-.productName {
+.cartproductName {
     font-size: 18px;
     font-weight: 600;
-    opacity: 0.7;
+    opacity: 0.cart7;
 }
 
-.productQuantity > div {
+.cartproductQuantity > div {
     display: flex;
 	width: 80%;
     position: relative;
     margin: auto;
 }
 
-.negativeSign {
+.cartnegativeSign {
     background: #ffd200;
     border: 2px solid #ffd200;
     border-radius: 5px;
@@ -185,7 +185,7 @@ tbody > tr > td {
     border: 1px solid #ffd200;
 }
 
-.positiveSign {
+.cartpositiveSign {
     background: #ffd200;
     border: 2px solid #ffd200;
     border-radius: 5px;
@@ -195,12 +195,12 @@ tbody > tr > td {
     cursor: pointer;
 }
 
-.productPrice {
+.cartproductPrice {
     font-size: 18px;
     font-weight: 600;
 }
 
-.addtowishlistButton > button {
+.cartaddtowishlistButton > button {
     width: 90%;
     height: 40px;
     background: #ffd200;
@@ -209,11 +209,11 @@ tbody > tr > td {
     font-weight: 600;
 }
 
-.addtowishlistButton > button > i {
+.cartaddtowishlistButton > button > i {
 	padding-right: 10px;
 }
 
-.productRemoveButton > button {
+.cartproductRemoveButton > button {
 	width: 90%;
     height: 40px;
     background: #eb3131;
@@ -223,7 +223,7 @@ tbody > tr > td {
 	color: white;
 }
 
-.productRemoveButton > button > i {
+.cartproductRemoveButton > button > i {
 	padding-right: 10px;
 }
 
@@ -232,7 +232,7 @@ tfoot {
 	height: 55px;
 }
 
-.continueShoppingButton > button {
+.cartcontinueShoppingButton > button {
 	width: 200px;
     height: 40px;
     background: #ffd200;
@@ -241,11 +241,11 @@ tfoot {
     font-weight: 600;
 }
 
-.continueShoppingButton > button > i {
+.cartcontinueShoppingButton > button > i {
 	padding-right: 10px;
 }
 
-.productCheckoutButton > button {
+.cartproductCheckoutButton > button {
 	width: 90%;
     height: 40px;
     background: #ffd200;

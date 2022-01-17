@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
-import { render } from "react-dom";
-import axios from "axios";
-import { siteURL, api } from "./woocommerce";
+import { api } from "./woocommerce";
+import "../css/checkout.css";
 import { useNavigate } from "react-router-dom";
 
 
@@ -47,19 +45,10 @@ const data = JSON.stringify({
     ],
 });
 
-let cssLoaded = false;
-
 function Checkout() {
 
 	let Redirect = useNavigate();
 
-	useEffect(() => {
-		if (cssLoaded === false) {
-			cssLoaded = true;
-			import('../css/checkout.css');
-		}
-	}, [])
-	
     function getCkeckoutDetails(e) {
         api.post(
             "orders",
@@ -106,22 +95,23 @@ function Checkout() {
     return (
         <div>
             {/* <button onClick={getCkeckoutDetails}> Activate Lasers</button> */}
-            <div className="container">
-                <span className="right-icon"></span>
-                <div className="form__name">
+            <div className="checkoutcontainer">
+                <span className="checkoutright-icon"></span>
+                <div className="checkoutform__name">
                     Installation and Billing Details{" "}
                 </div>
-                <div className="form__container">
-                    <section className="form__personal">
-                        <div className="sections">
-                            <div className="box">1</div>
+                <div className="checkoutform__container">
+                    <section className="checkoutform__personal">
+                        <div className="checkoutsections">
+                            <div className="checkoutbox">1</div>
                             <span>Personal Information</span>
                         </div>
-                        <div className="personal--form">
-                            <form className="form--name" action="">
-                                <div className="first">
+                        <div className="checkoutpersonal--form">
+                            <form className="checkoutform--name" action="">
+                                <div className="checkoutfirst">
                                     <label htmlFor="firstname">First Name</label>
                                     <input
+										className="checkoutInput"
                                         name="first-name"
                                         required="required"
                                         autoComplete="on"
@@ -130,9 +120,10 @@ function Checkout() {
                                         type="text"
                                     />
                                 </div>
-                                <div className="last">
+                                <div className="checkoutlast">
                                     <label htmlFor="firstname">Last Name</label>
                                     <input
+										className="checkoutInput"
                                         name="last-name"
                                         required="required"
                                         autoComplete="on"
@@ -141,9 +132,10 @@ function Checkout() {
                                         type="text"
                                     />
                                 </div>
-                                <div className="number">
+                                <div className="checkoutnumber">
                                     <label htmlFor="firstname">Mobile Number</label>
                                     <input
+										className="checkoutInput"
                                         name="mobilenumber"
                                         required="required"
                                         autoComplete="on"
@@ -155,9 +147,10 @@ function Checkout() {
                                     />
                                 </div>
 
-                                <div className="email">
+                                <div className="checkoutemail">
                                     <label htmlFor="firstname">Email</label>
                                     <input
+										className="checkoutInput"
                                         name="email"
                                         required="required"
                                         autoComplete="on"
@@ -169,19 +162,20 @@ function Checkout() {
                             </form>
                         </div>
                     </section>
-                    <section className="form__billing">
-                        <div className="sections">
-                            <div className="box billing">2</div>
+                    <section className="checkoutform__billing">
+                        <div className="checkoutsections">
+                            <div className="checkoutbox billing">2</div>
                             <span>Installation Address</span>
                         </div>
-                        <div className="shipping--form">
-                            <form className="form--shipping" action="">
-                                <div className="row one">
-                                    <div className="address">
+                        <div className="checkoutshipping--form">
+                            <form className="checkoutform--shipping" action="">
+                                <div className="checkoutrow one">
+                                    <div className="checkoutaddress">
                                         <label htmlFor="address-one">
                                             Address Line 1
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="address1"
                                             required="required"
                                             placeholder="e.g. 1 Infinite Loop"
@@ -189,21 +183,23 @@ function Checkout() {
                                             type="text"
                                         />
                                     </div>
-                                    <div className="address-two">
+                                    <div className="checkoutaddress-two">
                                         <label htmlFor="address-two">
                                             Address Line 2
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="address2"
                                             id="address-two"
                                             type="text"
                                         />
                                     </div>
                                 </div>
-                                <div className="row two">
-                                    <div className="city">
+                                <div className="checkoutrow two">
+                                    <div className="checkoutcity">
                                         <label htmlFor="city">City</label>
                                         <input
+											className="checkoutInput"
                                             name="city"
                                             required="required"
                                             placeholder="e.g. Mumbai"
@@ -211,11 +207,12 @@ function Checkout() {
                                             type="text"
                                         />
                                     </div>
-                                    <div className="state">
+                                    <div className="checkoutstate">
                                         <label htmlFor="state">
                                             State / Province / Region
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="state"
                                             required="required"
                                             placeholder="e.g. Maharashtra"
@@ -224,12 +221,13 @@ function Checkout() {
                                         />
                                     </div>
                                 </div>
-                                <div className="row three">
-                                    <div className="zip">
+                                <div className="checkoutrow three">
+                                    <div className="checkoutzip">
                                         <label htmlFor="zip">
                                             Zip / Postal Code
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="zipcode"
                                             required="required"
                                             pattern="[0-9]*"
@@ -239,9 +237,10 @@ function Checkout() {
                                             type="text"
                                         />
                                     </div>
-                                    <div className="country">
+                                    <div className="checkoutcountry">
                                         <label htmlFor="country">Country</label>
                                         <input
+											className="checkoutInput"
                                             name="country"
                                             required="required"
                                             placeholder="e.g. INDIA"
@@ -253,51 +252,55 @@ function Checkout() {
                             </form>
                         </div>
                     </section>
-                    <section className="form__shipping">
-                        <div className="sections">
-                            <div className="box">3</div>
+                    <section className="checkoutform__shipping">
+                        <div className="checkoutsections">
+                            <div className="checkoutbox">3</div>
                             <span>Billing Address</span>
                         </div>
-                        <div className="shipping--form">
-                            <form className="form--shipping" action="">
-                                <div className="row one">
-                                    <div className="address">
+                        <div className="checkoutshipping--form">
+                            <form className="checkoutform--shipping" action="">
+                                <div className="checkoutrow one">
+                                    <div className="checkoutaddress">
                                         <label htmlFor="address-one">
                                             Address Line 1
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="billaddress1"
                                             placeholder=""
                                             id="billaddress-one"
                                             type="text"
                                         />
                                     </div>
-                                    <div className="address-two">
+                                    <div className="checkoutaddress-two">
                                         <label htmlFor="address-two">
                                             Address Line 2
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="billaddress2"
                                             id="billaddress-two"
                                             type="text"
                                         />
                                     </div>
                                 </div>
-                                <div className="row two">
-                                    <div className="city">
+                                <div className="checkoutrow two">
+                                    <div className="checkoutcity">
                                         <label htmlFor="city">City</label>
                                         <input
+											className="checkoutInput"
                                             name="billcity"
                                             placeholder=""
                                             id="billcity"
                                             type="text"
                                         />
                                     </div>
-                                    <div className="state">
+                                    <div className="checkoutstate">
                                         <label htmlFor="state">
                                             State / Province / Region
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="billstate"
                                             placeholder=""
                                             id="billstate"
@@ -305,12 +308,13 @@ function Checkout() {
                                         />
                                     </div>
                                 </div>
-                                <div className="row three">
-                                    <div className="zip">
+                                <div className="checkoutrow three">
+                                    <div className="checkoutzip">
                                         <label htmlFor="zip">
                                             Zip / Postal Code
                                         </label>
                                         <input
+											className="checkoutInput"
                                             name="billzipcode"
                                             pattern="[0-9]*"
                                             maxLength="6"
@@ -319,9 +323,10 @@ function Checkout() {
                                             type="text"
                                         />
                                     </div>
-                                    <div className="country">
+                                    <div className="checkoutcountry">
                                         <label htmlFor="country">Country</label>
                                         <input
+											className="checkoutInput"
                                             name="billcountry"
                                             placeholder=""
                                             id="billcountry"
@@ -332,8 +337,9 @@ function Checkout() {
                             </form>
                         </div>
                     </section>
-                    <div className="form__question">
+                    <div className="checkoutform__question">
                         <input
+							className="checkoutInput"
                             type="checkbox"
                             id="same"
                             name="same"
@@ -344,8 +350,8 @@ function Checkout() {
                             address ?
                         </p>
                     </div>
-                    <div className="form__confirmation">
-                        <button onClick={paymentConfirm}>Confirm Information</button>
+                    <div className="checkoutform__confirmation">
+                        <button className="checkoutButton" onClick={paymentConfirm}>Confirm Information</button>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import "../css/singleproduct.css";
 import { useState, useEffect } from "react";
 
 import Warrenty from "../assets/warrenty.png";
@@ -5,25 +6,15 @@ import Shipping from "../assets/free-shipping.png";
 import PayMethods from "../assets/pay-methods.png";
 
 import { useNavigate } from "react-router-dom";
-import { api, coCartApi, siteURL } from "./woocommerce";
+import { api, siteURL } from "./woocommerce";
 import axios from "axios";
 
-let cssLoaded = false
-
 function SingleProduct() {
+    let Redirect = useNavigate();
 
-	
-	let Redirect = useNavigate();
-	
     const [product, setProduct] = useState();
-	
-    useEffect(() => {
-		
-		if (cssLoaded === false) {
-			cssLoaded = true;
-			import('../css/singleproduct.css');
-		}
 
+    useEffect(() => {
         async function getProduct() {
             api.get(
                 "products/7578",
@@ -113,7 +104,6 @@ function SingleProduct() {
                 console.log(response);
                 localStorage.setItem("cart_key", response.data.cart_key);
                 alert("Product Added to cart");
-                // Redirect("/cart");
             })
             .catch((error) => {
                 console.log(error);

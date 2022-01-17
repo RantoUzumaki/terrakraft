@@ -1,27 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { siteURL, coCartApi } from "./woocommerce";
-import img from "../assets/product-image1.png";
+import { siteURL } from "./woocommerce";
+import "../css/cart.css";
 import PayMethods from "../assets/pay-methods.png";
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
-let cssLoaded = false;
-
 function Cart() {
-
     let Redirect = useNavigate();
 
     const [cart, setCart] = useState([]);
     const [totals, setTotals] = useState([]);
 
     useEffect(() => {
-
-		if (cssLoaded === false) {
-			cssLoaded = true;
-			import('../css/cart.css');
-		}
-		
         async function getCart() {
             axios
                 .get(
@@ -133,15 +123,13 @@ function Cart() {
 
     return (
         <div>
-			{ console.log(cart) }
-			{ console.log(totals) }
             {totals ? (
-                <div className="cartContainer">
-                    <div className="cartHead">
+                <div className="cartcartContainer">
+                    <div className="cartcartHead">
                         <p>Shopping Cart</p>
                     </div>
-                    <div className="productsDiv">
-                        <div className="productSubDiv">
+                    <div className="cartproductsDiv">
+                        <div className="cartproductSubDiv">
                             <table>
                                 <thead>
                                     <tr>
@@ -156,7 +144,7 @@ function Cart() {
                                 <tbody>
                                     {Object.keys(cart).map((key) => (
                                         <tr key={cart[key].item_key}>
-                                            <td className="productImage">
+                                            <td className="cartproductImage">
                                                 <img
                                                     src={
                                                         cart[key].featured_image
@@ -164,7 +152,7 @@ function Cart() {
                                                     alt="img"
                                                 />
                                             </td>
-                                            <td className="productName">
+                                            <td className="cartproductName">
                                                 <p
                                                     id="productKey"
                                                     style={{ display: "none" }}
@@ -179,19 +167,19 @@ function Cart() {
                                                 </p>
                                                 {cart[key].name}
                                             </td>
-                                            <td className="productQuantity">
+                                            <td className="cartproductQuantity">
                                                 <div>
-                                                    <span className="negativeSign">
+                                                    <span className="cartnegativeSign">
                                                         <i
                                                             id="negative_num"
                                                             onClick={
                                                                 negative_num
                                                             }
-                                                            className="bi bi-chevron-left"
+                                                            className="cartbi bi-chevron-left"
                                                         ></i>
                                                     </span>
                                                     <input
-                                                        className="productQuantityInput"
+                                                        className="cartproductQuantityInput"
                                                         id="quantity_value"
                                                         defaultValue={
                                                             cart[key].quantity.value
@@ -206,29 +194,29 @@ function Cart() {
                                                             }
                                                         }}
                                                     />
-                                                    <span className="positiveSign">
+                                                    <span className="cartpositiveSign">
                                                         <i
                                                             id="positive_num"
                                                             onClick={
                                                                 positive_num
                                                             }
-                                                            className="bi bi-chevron-right"
+                                                            className="cartbi bi-chevron-right"
                                                         ></i>
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td className="productPrice">
+                                            <td className="cartproductPrice">
                                                 Rs. {cart[key].price}
                                             </td>
-                                            <td className="addtowishlistButton">
+                                            <td className="cartaddtowishlistButton">
                                                 <button type="button">
-                                                    <i className="bi bi-heart"></i>
+                                                    <i className="cartbi bi-heart"></i>
                                                     Wishlist
                                                 </button>
                                             </td>
-                                            <td className="productRemoveButton">
+                                            <td className="cartproductRemoveButton">
                                                 <button type="button">
-                                                    <i className="bi bi-trash"></i>
+                                                    <i className="cartbi bi-trash"></i>
                                                     Remove
                                                 </button>
                                             </td>
@@ -237,12 +225,12 @@ function Cart() {
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td className="continueShoppingButton">
+                                        <td className="cartcontinueShoppingButton">
                                             <button
                                                 type="button"
                                                 onClick={continueShopping}
                                             >
-                                                <i className="bi bi-chevron-left"></i>
+                                                <i className="cartbi bi-chevron-left"></i>
                                                 Continue shopping
                                             </button>
                                         </td>
@@ -250,25 +238,26 @@ function Cart() {
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td className="productCheckoutButton">
+                                        <td className="cartproductCheckoutButton">
                                             <button
                                                 onClick={checkout}
                                                 type="button"
                                             >
                                                 Checkout
-                                                <i className="bi bi-chevron-right"></i>
+                                                <i className="cartbi bi-chevron-right"></i>
                                             </button>
                                         </td>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
-                        <div className="coupenPriceDiv">
-                            <div className="coupenDiv">
+                        <div className="cartcoupenPriceDiv">
+                            <div className="cartcoupenDiv">
                                 <div>
                                     <p>Have coupon?</p>
                                     <div>
                                         <input
+										  	className="cartInput"
                                             type="text"
                                             placeholder="Coupon Code..."
                                         />
@@ -276,9 +265,9 @@ function Cart() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="priceDiv">
+                            <div className="cartpriceDiv">
                                 <div>
-                                    <div className="">
+                                    <div className="cart">
                                         <p>Total Price:</p>
                                         <p>Discount:</p>
                                         <p>Total:</p>
