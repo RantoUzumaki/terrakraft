@@ -53,11 +53,13 @@ function Checkout() {
 
 	let Redirect = useNavigate();
 
-	if (cssLoaded === false) {
-		cssLoaded = true;
-		import('../css/checkout.css');
-	}
-
+	useEffect(() => {
+		if (cssLoaded === false) {
+			cssLoaded = true;
+			import('../css/checkout.css');
+		}
+	}, [])
+	
     function getCkeckoutDetails(e) {
         api.post(
             "orders",

@@ -10,17 +10,18 @@ let cssLoaded = false;
 
 function Cart() {
 
-	if (cssLoaded === false) {
-		cssLoaded = true;
-		import('../css/cart.css');
-	}
-
     let Redirect = useNavigate();
 
     const [cart, setCart] = useState([]);
     const [totals, setTotals] = useState([]);
 
     useEffect(() => {
+
+		if (cssLoaded === false) {
+			cssLoaded = true;
+			import('../css/cart.css');
+		}
+		
         async function getCart() {
             axios
                 .get(

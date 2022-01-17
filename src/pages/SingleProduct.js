@@ -12,16 +12,18 @@ let cssLoaded = false
 
 function SingleProduct() {
 
-	if (cssLoaded === false) {
-		cssLoaded = true;
-		import('../css/singleproduct.css');
-	}
-
-    let Redirect = useNavigate();
-
+	
+	let Redirect = useNavigate();
+	
     const [product, setProduct] = useState();
-
+	
     useEffect(() => {
+		
+		if (cssLoaded === false) {
+			cssLoaded = true;
+			import('../css/singleproduct.css');
+		}
+
         async function getProduct() {
             api.get(
                 "products/7578",
