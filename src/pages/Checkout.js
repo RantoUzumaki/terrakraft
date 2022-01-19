@@ -2,65 +2,55 @@ import { api } from "./woocommerce";
 import "../css/checkout.css";
 import { useNavigate } from "react-router-dom";
 
-
-const data = JSON.stringify({
-    customer_id: 5,
-    payment_method: "bacs",
-    payment_method_title: "Direct Bank Transfer",
-    set_paid: true,
-    billing: {
-        first_name: "John",
-        last_name: "Doe",
-        address_1: "969 Market",
-        address_2: "",
-        city: "San Francisco",
-        state: "CA",
-        postcode: "94103",
-        country: "US",
-        email: "john.doe@example.com",
-        phone: "(555) 555-5555",
+const data = {
+    "customer_id": 5,
+    "payment_method": "bacs",
+    "payment_method_title": "Direct Bank Transfer",
+    "set_paid": true,
+    "billing": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "address_1": "969 Market",
+        "address_2": "",
+        "city": "San Francisco",
+        "state": "CA",
+        "postcode": "94103",
+        "country": "US",
+        "email": "john.doe@example.com",
+        "phone": "(555) 555-5555"
     },
-    shipping: {
-        first_name: "John",
-        last_name: "Doe",
-        address_1: "969 Market",
-        address_2: "",
-        city: "San Francisco",
-        state: "CA",
-        postcode: "94103",
-        country: "US",
+    "shipping": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "address_1": "969 Market",
+        "address_2": "",
+        "city": "San Francisco",
+        "state": "CA",
+        "postcode": "94103",
+        "country": "US"
     },
-    line_items: [
+    "line_items": [
         {
-            product_id: 7578,
-            quantity: 2,
-        },
+            "product_id": 7578,
+            "quantity": 2
+        }
     ],
-    shipping_lines: [
+    "shipping_lines": [
         {
-            method_id: "flat_rate",
-            method_title: "Flat Rate",
-            total: "10",
-        },
-    ],
-});
+            "method_id": "flat_rate",
+            "method_title": "Flat Rate",
+            "total": "10.00"
+        }
+    ]
+}
 
 function Checkout() {
-
-	let Redirect = useNavigate();
+    let Redirect = useNavigate();
 
     function getCkeckoutDetails(e) {
-        api.post(
-            "orders",
-            {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                },
-            },
-            data,
-            { withCredentials: true }
-        ).then((res) => {
+        api.post("orders", data).then((res) => {
             console.log(res);
+			Redirect("/payment");
         });
     }
 
@@ -86,11 +76,7 @@ function Checkout() {
             document.getElementById("billzip").value = "";
             document.getElementById("billcountry").value = "";
         }
-    }
-
-	function paymentConfirm(e) {
-        Redirect("/payment");
-    }
+	}
 
     return (
         <div>
@@ -98,7 +84,7 @@ function Checkout() {
             <div className="checkoutcontainer">
                 <span className="checkoutright-icon"></span>
                 <div className="checkoutform__name">
-                    Installation and Billing Details{" "}
+                    Billing Details
                 </div>
                 <div className="checkoutform__container">
                     <section className="checkoutform__personal">
@@ -109,9 +95,11 @@ function Checkout() {
                         <div className="checkoutpersonal--form">
                             <form className="checkoutform--name" action="">
                                 <div className="checkoutfirst">
-                                    <label htmlFor="firstname">First Name</label>
+                                    <label htmlFor="firstname">
+                                        First Name
+                                    </label>
                                     <input
-										className="checkoutInput"
+                                        className="checkoutInput"
                                         name="first-name"
                                         required="required"
                                         autoComplete="on"
@@ -123,7 +111,7 @@ function Checkout() {
                                 <div className="checkoutlast">
                                     <label htmlFor="firstname">Last Name</label>
                                     <input
-										className="checkoutInput"
+                                        className="checkoutInput"
                                         name="last-name"
                                         required="required"
                                         autoComplete="on"
@@ -133,9 +121,11 @@ function Checkout() {
                                     />
                                 </div>
                                 <div className="checkoutnumber">
-                                    <label htmlFor="firstname">Mobile Number</label>
+                                    <label htmlFor="firstname">
+                                        Mobile Number
+                                    </label>
                                     <input
-										className="checkoutInput"
+                                        className="checkoutInput"
                                         name="mobilenumber"
                                         required="required"
                                         autoComplete="on"
@@ -150,7 +140,7 @@ function Checkout() {
                                 <div className="checkoutemail">
                                     <label htmlFor="firstname">Email</label>
                                     <input
-										className="checkoutInput"
+                                        className="checkoutInput"
                                         name="email"
                                         required="required"
                                         autoComplete="on"
@@ -175,7 +165,7 @@ function Checkout() {
                                             Address Line 1
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="address1"
                                             required="required"
                                             placeholder="e.g. 1 Infinite Loop"
@@ -188,7 +178,7 @@ function Checkout() {
                                             Address Line 2
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="address2"
                                             id="address-two"
                                             type="text"
@@ -199,7 +189,7 @@ function Checkout() {
                                     <div className="checkoutcity">
                                         <label htmlFor="city">City</label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="city"
                                             required="required"
                                             placeholder="e.g. Mumbai"
@@ -212,7 +202,7 @@ function Checkout() {
                                             State / Province / Region
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="state"
                                             required="required"
                                             placeholder="e.g. Maharashtra"
@@ -227,7 +217,7 @@ function Checkout() {
                                             Zip / Postal Code
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="zipcode"
                                             required="required"
                                             pattern="[0-9]*"
@@ -240,7 +230,7 @@ function Checkout() {
                                     <div className="checkoutcountry">
                                         <label htmlFor="country">Country</label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="country"
                                             required="required"
                                             placeholder="e.g. INDIA"
@@ -265,7 +255,7 @@ function Checkout() {
                                             Address Line 1
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billaddress1"
                                             placeholder=""
                                             id="billaddress-one"
@@ -277,7 +267,7 @@ function Checkout() {
                                             Address Line 2
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billaddress2"
                                             id="billaddress-two"
                                             type="text"
@@ -288,7 +278,7 @@ function Checkout() {
                                     <div className="checkoutcity">
                                         <label htmlFor="city">City</label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billcity"
                                             placeholder=""
                                             id="billcity"
@@ -300,7 +290,7 @@ function Checkout() {
                                             State / Province / Region
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billstate"
                                             placeholder=""
                                             id="billstate"
@@ -314,7 +304,7 @@ function Checkout() {
                                             Zip / Postal Code
                                         </label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billzipcode"
                                             pattern="[0-9]*"
                                             maxLength="6"
@@ -326,7 +316,7 @@ function Checkout() {
                                     <div className="checkoutcountry">
                                         <label htmlFor="country">Country</label>
                                         <input
-											className="checkoutInput"
+                                            className="checkoutInput"
                                             name="billcountry"
                                             placeholder=""
                                             id="billcountry"
@@ -339,7 +329,7 @@ function Checkout() {
                     </section>
                     <div className="checkoutform__question">
                         <input
-							className="checkoutInput"
+                            className="checkoutInput"
                             type="checkbox"
                             id="same"
                             name="same"
@@ -351,7 +341,12 @@ function Checkout() {
                         </p>
                     </div>
                     <div className="checkoutform__confirmation">
-                        <button className="checkoutButton" onClick={paymentConfirm}>Confirm Information</button>
+                        <button
+                            className="checkoutButton"
+                            onClick={getCkeckoutDetails}
+                        >
+                            Confirm Information
+                        </button>
                     </div>
                 </div>
             </div>

@@ -16,17 +16,7 @@ function SingleProduct() {
 
     useEffect(() => {
         async function getProduct() {
-            api.get(
-                "products/7578",
-                {
-                    headers: {
-                        "Authorization": `Bearer ${localStorage.getItem(
-                            "token"
-                        )}`,
-                    },
-                },
-                { withCredentials: true }
-            ).then((res) => {
+            api.get("products/7578").then((res) => {
                 console.log(res);
                 setProduct(res.data);
             });
@@ -81,7 +71,6 @@ function SingleProduct() {
 
     function addToCart(e) {
         var prodId = e.target.attributes["data-index"].value;
-        var cart_key = localStorage.getItem("cart_key");
         var data = {
             id: prodId,
             quantity: "1",

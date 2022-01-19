@@ -156,7 +156,7 @@
         cubic-bezier(0checkout4, 0, 0checkout2, 1);
 }
 .checkoutform__question input[type="checkbox"]:checked {
-    background-color: #18c2c0;
+    background-color: #ffd200;
 }
 
 .checkoutInput {
@@ -170,10 +170,10 @@
     padding: 10px;
     transition: border-color 0checkout2s
         cubic-bezier(0checkout4, 0, 0checkout2, 1);
-    color: #18c2c0;
+    color: #ffd200;
 }
 .checkoutInput:focus {
-    border-color: #18c2c0;
+    border-color: #ffd200;
 }
 .checkoutInput::placeholder {
     font-weight: 500;
@@ -189,7 +189,7 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    background-color: #18c2c0;
+    background-color: #ffd200;
     border: 1px solid #dadde8;
     color: #fff;
     padding: 18px;
@@ -201,10 +201,11 @@
     left: 80%;
 }
 .checkoutButton:hover {
-    background-color: #15aeac;
+    background-color: #000;
+	color: white;
 }
 .checkoutButton:active {
-    background-color: #139b99;
+    background-color: black;
 }
 
 .checkoutbox {
@@ -217,9 +218,9 @@
     width: 40px;
     line-height: 35px;
     border-radius: 50px;
-    border: 2px solid #646e8a;
+    border: 2px solid #ffd200;
     text-align: center;
-    color: #646e8a;
+    color: #ffd200;
 }
 .checkoutbox.checkoutbilling {
     line-height: 30px;

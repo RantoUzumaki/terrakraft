@@ -1,0 +1,165 @@
+.HomeMainDiv {
+    background-image: url("../assets/background.png");
+}
+
+.HomeRow1 {
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.HomeAdvancedSearchDiv {
+    width: 70%;
+    margin: auto;
+    height: 75%;
+    position: relative;
+}
+
+.HomeAdvancedSearchDiv > p:first-child {
+    font-size: 66px;
+    font-weight: 600;
+}
+
+.HomeAdvancedSearchDiv > p:nth-child(2),
+.HomeAdvancedSearchDiv > p:nth-child(3) {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.HomeAdvancedSearch {
+    width: 30%;
+    height: 70px;
+    border-radius: 30px;
+    border: 0;
+    margin-top: 25px;
+    background: #ffd200;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.HomeRow2 {
+    background: #e3e3e3;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.HomeRow2Col1 {
+    display: flex;
+    width: 75%;
+    height: 50%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HomeRow2Col1 > div {
+    width: 30%;
+    position: relative;
+    text-align: center;
+}
+
+.HomeCircleElement {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: #d3d3d3;
+    position: relative;
+    margin: auto;
+}
+
+.HomeRow2Col1 > div > p:first-of-type {
+    font-size: 32px;
+    opacity: 0.5;
+    font-weight: 600;
+    margin: 0;
+}
+
+.HomeRow2Col1 > div > p:last-of-type {
+    font-size: 22px;
+    opacity: 0.5;
+}
+
+.HomeRow2Col2 {
+    width: 60%;
+    display: flex;
+    margin: auto;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.HomeWaterResistant,
+.HomeAuthentic,
+.HomeImprint,
+.HomeAbrasion {
+    opacity: 0.5;
+}
+
+.HomeRow3, .HomeRow4 {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.HomeRow3Col1, .HomeRow4Col1 {
+    width: 85%;
+    height: 20%;
+    margin: 0 0 0 auto;
+}
+
+.HomeFlooringDiv, .HomeWallCoveringDiv {
+    width: 15%;
+    background: #ffd200;
+    height: 80%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeFlooring, .HomeWallCovering {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.HomeRow3Col2, .HomeRow4Col2 {
+    width: 85%;
+    height: 70%;
+    margin: 0 0 0 auto;
+}
+
+.HomeFlooringImageDiv, .HomeWallCoveringImageDiv {
+    width: 500px;
+    height: 360px;;
+}
+
+.HomeFlooringImage, .HomeWallCoveringImage {
+    width: 100%;
+}
+
+.HomeFlooringTextHoverDiv, .HomeWallCoveringTextHoverDiv {
+    position: absolute;
+    bottom: 10%;
+    font-size: 32px;
+    left: 15%;
+    width: 50%;
+    color: white;
+    font-weight: 600;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+}
+
+.HomeFlooringImageDiv:hover .HomeFlooringImage, .HomeWallCoveringImageDiv:hover .HomeWallCoveringImage {
+	transition: 0.8s ease-in-out;
+	opacity: 0.3;
+}
+
+.HomeFlooringImageDiv:hover .HomeFlooringTextHoverDiv, .HomeWallCoveringImageDiv:hover .HomeWallCoveringTextHoverDiv {
+	opacity: 1;
+}
