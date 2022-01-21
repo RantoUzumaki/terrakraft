@@ -16,7 +16,7 @@ function SingleProduct() {
 
     useEffect(() => {
         async function getProduct() {
-            api.get("products/7578").then((res) => {
+            api.get("products/7610").then((res) => {
                 console.log(res);
                 setProduct(res.data);
             });

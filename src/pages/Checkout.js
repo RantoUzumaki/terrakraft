@@ -1,56 +1,57 @@
 import { api } from "./woocommerce";
 import "../css/checkout.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const data = {
-    "customer_id": 5,
-    "payment_method": "bacs",
-    "payment_method_title": "Direct Bank Transfer",
-    "set_paid": true,
-    "billing": {
-        "first_name": "John",
-        "last_name": "Doe",
-        "address_1": "969 Market",
-        "address_2": "",
-        "city": "San Francisco",
-        "state": "CA",
-        "postcode": "94103",
-        "country": "US",
-        "email": "john.doe@example.com",
-        "phone": "(555) 555-5555"
+    customer_id: 2,
+    payment_method: "razorpay",
+    payment_method_title: "Online Transfer",
+    set_paid: false,
+    billing: {
+        first_name: "John",
+        last_name: "Doe",
+        address_1: "969 Market",
+        address_2: "",
+        city: "San Francisco",
+        state: "CA",
+        postcode: "94103",
+        country: "US",
+        email: "john.doe@example.com",
+        phone: "(555) 555-5555",
     },
-    "shipping": {
-        "first_name": "John",
-        "last_name": "Doe",
-        "address_1": "969 Market",
-        "address_2": "",
-        "city": "San Francisco",
-        "state": "CA",
-        "postcode": "94103",
-        "country": "US"
+    shipping: {
+        first_name: "John",
+        last_name: "Doe",
+        address_1: "969 Market",
+        address_2: "",
+        city: "San Francisco",
+        state: "CA",
+        postcode: "94103",
+        country: "US",
     },
-    "line_items": [
+    line_items: [
         {
-            "product_id": 7578,
-            "quantity": 2
-        }
+            product_id: 7611,
+            quantity: 5,
+        },
     ],
-    "shipping_lines": [
+    shipping_lines: [
         {
-            "method_id": "flat_rate",
-            "method_title": "Flat Rate",
-            "total": "10.00"
-        }
-    ]
-}
+            method_id: "flat_rate",
+            method_title: "Flat Rate",
+            total: "10.00",
+        },
+    ],
+};
 
 function Checkout() {
     let Redirect = useNavigate();
 
     function getCkeckoutDetails(e) {
         api.post("orders", data).then((res) => {
-            console.log(res);
-			Redirect("/payment");
+            localStorage.setItem("order_details", JSON.stringify(res.data));
+            Redirect("/payment");
         });
     }
 
@@ -76,16 +77,14 @@ function Checkout() {
             document.getElementById("billzip").value = "";
             document.getElementById("billcountry").value = "";
         }
-	}
+    }
 
     return (
         <div>
             {/* <button onClick={getCkeckoutDetails}> Activate Lasers</button> */}
             <div className="checkoutcontainer">
                 <span className="checkoutright-icon"></span>
-                <div className="checkoutform__name">
-                    Billing Details
-                </div>
+                <div className="checkoutform__name">Billing Details</div>
                 <div className="checkoutform__container">
                     <section className="checkoutform__personal">
                         <div className="checkoutsections">
