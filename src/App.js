@@ -8,6 +8,7 @@ import Checkout from "./pages/Checkout";
 import Homepage from "./pages/Homepage";
 import Regitser from "./pages/Register";
 import Flooring from "./pages/Flooring";
+import Footer from "./pages/Footer";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/checkout" element={<Checkout />}></Route>
                     <Route path="/payment" element={<PayByRazorPay />}></Route>
                 </Routes>
+				<Footer />
             </Router>
         </div>
     );

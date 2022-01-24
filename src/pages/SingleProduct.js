@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { api, siteURL } from "./woocommerce";
 import axios from "axios";
 
-function SingleProduct() {
+function SingleProduct(param) {
+	console.log(param)
     let Redirect = useNavigate();
 
     const [product, setProduct] = useState();
@@ -17,7 +18,6 @@ function SingleProduct() {
     useEffect(() => {
         async function getProduct() {
             api.get("products/7610").then((res) => {
-                console.log(res);
                 setProduct(res.data);
             });
         }

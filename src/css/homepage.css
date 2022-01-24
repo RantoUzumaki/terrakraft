@@ -436,7 +436,14 @@
 .HomeBlogShow3Div {
     width: 30%;
     position: relative;
-    box-shadow: -15px 15px white, -15px 15px 0px 1px black;
+	/* box-shadow: -15px 15px white, -15px 15px 0px 1px black; */
+}
+
+.HomeBlogShow1Div:hover,
+.HomeBlogShow2Div:hover,
+.HomeBlogShow3Div:hover {
+	transition: 0.5s;
+	box-shadow: -15px 15px white, -15px 15px 0px 1px black;
 }
 
 .HomeBlogShow1,

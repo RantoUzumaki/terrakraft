@@ -1,0 +1,135 @@
+.FlooringMainRow {
+    width: 100%;
+    height: max-content;
+}
+
+.FlooringCenteredCol {
+    width: 70%;
+    margin: auto;
+}
+
+.FlooringTitle {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.FlooringSeperatorDiv {
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+
+.FlooringFilterDiv {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.FlooringFilterSubDiv {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.FlooringFilterText {
+    opacity: 0.7;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+.FlooringProductsListingDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.FlooringProductDiv {
+    width: 24%;
+    border: 0.5px solid rgb(146, 146, 146);
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.FlooringProductDiv:hover {
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: 0 0 5px 1px #919191;
+}
+
+.FlooringImageDiv {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* .FlooringImageDiv:hover {
+	transition: 0.5s ease-in-out;
+	box-shadow: 0 0 8px 1px black;
+} */
+
+.FlooringProductImage {
+    width: 100%;
+    height: 160px;
+}
+
+.FlooringProductNumberArea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.FlooringDesignNumberTitle,
+.FlooringRollAreaTitle {
+    opacity: 0.5;
+    margin: 0;
+    font-size: 12px;
+}
+
+.FlooringDesignNumber,
+.FlooringRollArea {
+    margin: 0;
+}
+
+.FlooringProductTitleHeadDiv {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.FlooringProductTitleHead {
+    margin: 0;
+}
+
+.FlooringProductPersqft {
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.FlooringProductBtnsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.FlooringAddtocartbtn {
+    width: 75%;
+    background: #ffd200;
+    border: 0;
+    font-weight: 600;
+    border-radius: 15px;
+    height: 30px;
+}
+
+.FlooringAddtowishlistbtn {
+    width: 20%;
+    height: 30px;
+    border: 2px solid #ffd200;
+    background: transparent;
+    border-radius: 15px;
+}
+
+.FlooringAddtowishlistbtn > i {
+    color: red;
+}
