@@ -3,7 +3,7 @@
 }
 
 .HomeRow1 {
-    height: 500px;
+    height: 350px;
     width: 100%;
     display: flex;
 }
@@ -11,36 +11,36 @@
 .HomeAdvancedSearchDiv {
     width: 70%;
     margin: auto;
-    height: 75%;
+    height: max-content;
     position: relative;
 }
 
 .HomeAdvancedSearchDiv > p:first-child {
-    font-size: 66px;
+    font-size: 46px;
     font-weight: 600;
 }
 
 .HomeAdvancedSearchDiv > p:nth-child(2),
 .HomeAdvancedSearchDiv > p:nth-child(3) {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 0;
 }
 
 .HomeAdvancedSearch {
     width: 30%;
-    height: 70px;
+    height: 50px;
     border-radius: 30px;
     border: 0;
     margin-top: 25px;
     background: #ffd200;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 600;
 }
 
 .HomeRow2 {
     background: #e3e3e3;
     width: 100%;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -99,54 +99,77 @@
     opacity: 0.5;
 }
 
-.HomeRow3, .HomeRow4 {
+.HomeRow3,
+.HomeRow4 {
     width: 100%;
-    height: 550px;
+    height: max-content;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
-.HomeRow3Col1, .HomeRow4Col1 {
+.HomeRow3Col1,
+.HomeRow4Col1 {
     width: 85%;
-    height: 20%;
-    margin: 0 0 0 auto;
+    height: 50px;
+    margin: 0 0 20px auto;
 }
 
-.HomeFlooringDiv, .HomeWallCoveringDiv {
+.HomeFlooringDiv,
+.HomeWallCoveringDiv {
     width: 15%;
     background: #ffd200;
-    height: 80%;
-    font-size: 32px;
+    height: 100%;
+    font-size: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.HomeFlooring, .HomeWallCovering {
+.HomeFlooring,
+.HomeWallCovering {
     margin: 0;
     text-transform: uppercase;
 }
 
-.HomeRow3Col2, .HomeRow4Col2 {
+.HomeRow3Col2,
+.HomeRow4Col2 {
     width: 85%;
-    height: 70%;
     margin: 0 0 0 auto;
 }
 
-.HomeFlooringImageDiv, .HomeWallCoveringImageDiv {
-    width: 500px;
-    height: 360px;;
-}
-
-.HomeFlooringImage, .HomeWallCoveringImage {
+.HomeFlooringImageDivSec,
+.HomeWallCoveringImageDivSec,
+.HomeFeaturedProductsImageDivSec,
+.HomeRecentlyViewedImageDivSec {
     width: 100%;
 }
 
-.HomeFlooringTextHoverDiv, .HomeWallCoveringTextHoverDiv {
+/* .HomeFeaturedProductsImageDiv:hover {
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 5px black;
+} */
+
+.HomeFlooringImageDiv,
+.HomeWallCoveringImageDiv,
+.HomeFeaturedProductsImageDiv,
+.HomeRecentlyViewedImageDiv {
+    width: 90%;
+}
+
+.HomeFlooringImage,
+.HomeWallCoveringImage,
+.HomeFeaturedProductsImage,
+.HomeRecentlyViewedImage {
+    width: 100%;
+}
+
+.HomeFlooringTextHoverDiv,
+.HomeWallCoveringTextHoverDiv {
     position: absolute;
     bottom: 10%;
-    font-size: 32px;
+    font-size: 20px;
     left: 15%;
     width: 50%;
     color: white;
@@ -155,11 +178,297 @@
     opacity: 0;
 }
 
-.HomeFlooringImageDiv:hover .HomeFlooringImage, .HomeWallCoveringImageDiv:hover .HomeWallCoveringImage {
-	transition: 0.8s ease-in-out;
-	opacity: 0.3;
+.HomeFlooringImageDiv:hover .HomeFlooringImage,
+.HomeWallCoveringImageDiv:hover .HomeWallCoveringImage {
+    transition: 0.8s ease-in-out;
+    opacity: 0.3;
 }
 
-.HomeFlooringImageDiv:hover .HomeFlooringTextHoverDiv, .HomeWallCoveringImageDiv:hover .HomeWallCoveringTextHoverDiv {
-	opacity: 1;
+.HomeFlooringImageDiv:hover .HomeFlooringTextHoverDiv,
+.HomeWallCoveringImageDiv:hover .HomeWallCoveringTextHoverDiv {
+    opacity: 1;
+}
+
+.HomeRow5,
+.HomeRow6,
+.HomeRow7,
+.HomeRow9 {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.HomeRow5Col1,
+.HomeRow6Col1,
+.HomeRow7Col1,
+.HomeRow9Col1 {
+    width: 70%;
+    height: 50px;
+    margin: 0 auto 50px;
+}
+
+.HomePagebgStripe {
+    width: 100%;
+    background: url(../assets/strip_bg.png);
+    height: 100%;
+    display: flex;
+}
+
+.HomeFeaturedProductsTextDiv,
+.HomeRecentlyViewedTextDiv,
+.HomeTestimonialsTextDiv,
+.HomeBlogsTitleTextDiv {
+    width: 35%;
+    background: white;
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 20%;
+}
+
+.HomeFeaturedProductsText,
+.HomeRecentlyViewedText,
+.HomeTestimonialsText,
+.HomeBlogsTitleText {
+    margin: 0;
+}
+
+.HomeRow5Col2,
+.HomeRow6Col2 {
+    width: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.HomeFeaturedProductsTitleTextDiv,
+.HomeRecentlyViewedTitleTextDiv {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.HomeFeaturedProductsTitleText,
+.HomeRecentlyViewedTitleText {
+    margin: 0;
+}
+
+.HomeFeaturedProductsPriceText,
+.HomeRecentlyViewedPriceText {
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.HomeRow7Col2 {
+    width: 85%;
+    margin: 0 0 0 auto;
+}
+
+.HomeTestimonialContainerDiv {
+    display: flex;
+    width: 450px;
+    height: 220px;
+    border: 1px solid black;
+}
+
+.HomeCustomerDetailsDiv {
+    width: 50%;
+}
+
+.HomeCustomerProfileImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.HomeCustomerNameDetailsDiv {
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+.HomeCustomerName {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.HomeCustomerTestimonial {
+    line-height: 16px;
+    font-style: italic;
+}
+
+.HomeTestimonialProductDetailsDiv {
+    width: 50%;
+}
+
+.HomeProductImageDiv {
+    width: 100%;
+    height: 100%;
+}
+
+.HomeProductImage {
+    width: 100%;
+    height: 100%;
+}
+
+.HomeProductDetailsDiv {
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    height: 50px;
+    background: #ccc;
+}
+
+.HomeProductDetailsName {
+    width: 80%;
+    position: relative;
+    margin: auto;
+    font-weight: 600;
+    color: white;
+}
+
+.HomeProductOtherFeatures {
+    width: 80%;
+    position: relative;
+    margin: auto;
+    color: white;
+    font-size: 12px;
+}
+
+.home-testimoninals-carousel-container > ul > li {
+    width: max-content !important;
+    margin: 0 20px;
+}
+
+.HomeRow8 {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.HomeRow8 > div {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.HomeFreeEBookDownloadSecTitle {
+    width: 100%;
+    font-size: 28px;
+    margin: 50px 0 30px;
+    font-weight: 600;
+}
+
+.HomeFreeEbookDownloadInputsDiv {
+    width: 50%;
+    position: relative;
+    text-align: center;
+    height: 340px;
+}
+
+.HomeFormFillingText {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.HomeFreeDownloadEBookNameInput,
+.HomeFreeDownloadEBookEmailInput,
+.HomeFreeDownloadEBookLocationInput,
+.HomeFreeDownloadEBookNumberInput {
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid black;
+    height: 40px;
+    padding-left: 5%;
+}
+
+.HomeFreeDownloadEbookButton {
+    width: 35%;
+    margin: 10px auto;
+    border: 0;
+    height: 35px;
+    background: #ffd200;
+}
+
+.HomeFreeEbookImageDiv {
+    width: 50%;
+    height: 340px;
+    position: relative;
+}
+
+.HomeFreeEbookImage {
+    width: 100%;
+    height: 100%;
+}
+
+.HomeFreeEbookImageText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 80%;
+    margin: 0 10% 5% 10%;
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.HomeRow9Col2 {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.HomeBlogsShowcaseDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.HomeBlogShow1Div,
+.HomeBlogShow2Div,
+.HomeBlogShow3Div {
+    width: 30%;
+    position: relative;
+    box-shadow: -15px 15px white, -15px 15px 0px 1px black;
+}
+
+.HomeBlogShow1,
+.HomeBlogShow2,
+.HomeBlogShow3 {
+    width: 100%;
+}
+
+.HomeBlogShow1Title,
+.HomeBlogShow2Title,
+.HomeBlogShow3Title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 80%;
+    padding-left: 10%;
+    font-size: 26px;
+}
+
+.HomeBlogsShowMoreButtonDiv {
+    display: flex;
+    width: 70%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: end;
+}
+
+.HomeShowMoreBtn {
+    width: 20%;
+    height: 50px;
+    border: 0;
+    font-size: 24px;
+    background: #ffd200;
+    font-weight: 600;
 }

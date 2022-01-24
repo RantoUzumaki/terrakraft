@@ -31,7 +31,7 @@ function CarouselTemplate() {
         right: "0",
         width: "50%",
         color: "white",
-        fontSize: "32px",
+        fontSize: "26px",
         textAlign: "start",
         fontWeight: "600",
         letterSpacing: "1.5px",
@@ -67,11 +67,11 @@ function CarouselTemplate() {
                             style={{
                                 ...RightarrowStyles,
                                 background: "white",
-                                width: "60px",
-                                height: "60px",
+                                width: "40px",
+                                height: "40px",
                                 borderRadius: "100%",
                                 border: "0",
-                                fontSize: "30px",
+                                fontSize: "22px",
                                 fontWeight: "bolder",
                             }}
                         >
@@ -88,11 +88,11 @@ function CarouselTemplate() {
                             style={{
                                 ...LeftarrowStyles,
                                 background: "white",
-                                width: "60px",
-                                height: "60px",
+                                width: "40px",
+                                height: "40px",
                                 borderRadius: "100%",
                                 border: "0",
-                                fontSize: "30px",
+                                fontSize: "22px",
                                 fontWeight: "bolder",
                             }}
                         >

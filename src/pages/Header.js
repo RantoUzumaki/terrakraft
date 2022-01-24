@@ -1,12 +1,13 @@
 import "../css/header.css";
-
 import logoWhite from "../assets/logo-white.png";
-
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
-	
-    function goToCart() {}
+
+	let Router = new useNavigate()
+	function flooringPage() {
+		Router("/product/flooring")
+	}
 
     return (
         <div>
@@ -31,23 +32,28 @@ function Header() {
                                 </div>
                                 <div className="header-cart-icon">
                                     <Link to="/cart">
-                                        <span
-                                            onClick={goToCart}
-                                            className="header-cart-icon-span"
-                                        >
+                                        <span className="header-cart-icon-span">
                                             <i className="header-bi bi-cart-dash "></i>
                                         </span>
                                     </Link>
                                 </div>
                                 <div className="header-wishlist-icon">
                                     <span className="header-wishlist-icon-span">
-                                        <i className="header-bi bi-heart-fill "></i>
+                                        <i className="header-bi bi-heart-fill"></i>
                                     </span>
                                 </div>
-                                <div className="header-profile-icon">
+                                <div className="header-profile-icon header-dropdown">
                                     <span className="header-profile-icon-span">
                                         <i className="header-bi bi-person-fill "></i>
                                     </span>
+                                    <div className="header-dropdown-content">
+                                        <Link to="/profile">Profile</Link>
+                                        { !localStorage.getItem("token") ? (
+                                            <Link to="/login">Login</Link>
+                                        ) : (
+                                            <Link to="/logout">Logout</Link>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,34 +63,34 @@ function Header() {
                 <div className="header-header-navbar">
                     <div className="header-navbar-center">
                         <div className="header-flooring-btn">
-                            <a className="header-flooring" href="#">
+                            <button className="header-flooring" onClick={flooringPage}>
                                 Flooring
-                            </a>
+                            </button>
                         </div>
                         <div className="header-wallcovering-btn">
-                            <a className="header-wallcovering" href="#">
+                            <button className="header-wallcovering">
                                 Wallcovering
-                            </a>
+                            </button>
                         </div>
                         <div className="header-store-locater-btn">
-                            <a className="header-store-locater" href="#">
+                            <button className="header-store-locater">
                                 Store Locater
-                            </a>
+                            </button>
                         </div>
                         <div className="header-design-your-room-btn">
-                            <a className="header-design-your-room" href="#">
+                            <button className="header-design-your-room">
                                 Design your room
-                            </a>
+                            </button>
                         </div>
                         <div className="header-partner-with-us-btn">
-                            <a className="header-partner-with-us" href="#">
+                            <button className="header-partner-with-us">
                                 Partner with us
-                            </a>
+                            </button>
                         </div>
                         <div className="header-downloads-btn">
-                            <a className="header-downloads" href="#">
+                            <button className="header-downloads">
                                 Downloads
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
